@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction Review</title>
+    <link rel="stylesheet" href="css\style.css">
+</head>
+<body>
+    <!-- Transaction Review Section -->
+    <section class="transaction-review">
+        <h2>Sky Dandelions Apartment</h2>
+        <p>Location: Sector 28, Gurgaon</p>
+        <p>New Rent Offer: ₹ 20,000</p>
+        <p>Zero security deposit move-in</p>
+        <p>3 Months salary cover</p>
+        <button onclick="showModal()">View Details</button>
+    </section>
+
+   <!-- Modal Structure -->
+   <div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Rent at Zero Deposit</h2>
+        <p class="approved">
+            <span class="tick">✔</span> Approved
+        </p>
+        <button onclick="showStep(1)">Continue</button>
+    </div>
+</div>
+
+<!-- Multi-Step Process Modal -->
+<div id="multiStepModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeMultiStepModal()">&times;</span>
+        <div id="step1" class="step">
+            <h2>1. Eligibility Check</h2>
+            <label for="basicDetails">Basic Details:</label>
+            <input type="text" id="basicDetails" placeholder="Enter your name"><br>
+            <label for="workDetails">Work Details:</label>
+            <input type="text" id="workDetails" placeholder="Enter your work details"><br>
+            <button onclick="showStep(2)">Next</button>
+        </div>
+
+        <div id="step2" class="step" style="display: none;">
+            <h2>2. Setup Autopay</h2>
+            <label for="bankDetails">Bank Details:</label>
+            <input type="text" id="bankDetails" placeholder="Enter your bank details"><br>
+            <label for="identityVerification">Identity Verification:</label>
+            <input type="text" id="identityVerification" placeholder="Enter your identity info"><br>
+            <button onclick="showStep(3)">Next</button>
+        </div>
+
+        <div id="step3" class="step" style="display: none;">
+            <h2>3. Move In</h2>
+            <p>Prepare for moving into your new home!</p>
+            <button onclick="showFinalDetails()">Finish</button>
+        </div>
+
+        <div id="finalDetails" class="step" style="display: none;">
+            <h2>Final Details</h2>
+            <p>Payment Amount: ₹ 22,000</p>
+            <p>Monthly Rent: ₹ 22,000</p>
+            <p>Rent Cycle: Monthly</p>
+            <p>Co-Living Partner: Approved</p>
+            <button onclick="closeMultiStepModal()">Close</button>
+        </div>
+    </div>
+</div>
+
+<script src="js\main.js"></script>
+</body>
+</html>
+

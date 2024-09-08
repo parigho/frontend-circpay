@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Rental Service</title>
+    <link rel="stylesheet" href="css\style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Property Rental Service</h1>
+        <input type="text" id="searchBar" placeholder="Search properties..." oninput="filterProperties()">
+    </header>
+
+    <!-- Property List Section -->
+    <section id="property-list">
+        <div class="property-card">
+            <img src="pic1.png" alt="Sky Dandelions Apartment">
+            <div class="property-info">
+                <h2>Sky Dandelions Apartment</h2>
+                <p>Sector 28, Gurgaon</p>
+                <p>₹ 22,000/month</p>
+                <button onclick="goToTransactionReview()">View Details</button>
+            </div>
+        </div>
+        <div class="property-card">
+            <img src="pic2.png" alt="Wings Tower">
+            <div class="property-info">
+                <h2>Wings Tower</h2>
+                <p>Sector 27, Gurgaon</p>
+                <p>₹ 17,000/month</p>
+                <button onclick="goToTransactionReview()">View Details</button>
+            </div>
+        </div>
+        <div class="property-card">
+            <img src="pic3.png" alt="Wayside Modern House">
+            <div class="property-info">
+                <h2>Wayside Modern House</h2>
+                <p>MG Road, Gurgaon</p>
+                <p>₹ 18,000/month</p>
+                <button onclick="goToTransactionReview()">View Details</button>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="js\main.js"></script>
+</body>
+</html>
